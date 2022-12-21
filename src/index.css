@@ -1,6 +1,35 @@
+article{
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 20px;
+}
+
+article img{
+  max-width: 800px;
+}
+
+#root{
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 body {
   margin: 0;
   font-family: Noto Sans KR,sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/*페이지가 800px 이하일때*/
+@media screen and (max-width: 800px) {
+  article{
+    padding: 0 10px;
+    width: calc(100% - 20px);
+    word-break: keep-all;
+  }
+
+  article img{
+    max-width: 100%;
+  }
 }
