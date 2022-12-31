@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Page1.module.css';
-
+import BlurCircle from '../../components/BlurCircle';
 
 const Info = () => {
   return (
@@ -24,8 +24,8 @@ const Info = () => {
 const Page1 = () => {
   return (
     <div className={style.main}>
-      <div className={style.circle1}></div>
-      <div className={style.circle2}></div>
+      <BlurCircle top="-15vw" left="-15vw" color="#80E8FF" />
+      <BlurCircle right="-15vw" bottom="-15vw" m_bottom="-15vw" color="#FFAEFC" />
       <div className={style.img1}>
         <Info/>
       </div>

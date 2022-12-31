@@ -10,26 +10,6 @@
     position: absolute;
 }
 
-.circle1{
-    position: absolute;
-    width:30vw;
-    height:30vw;
-    top:-15vw;
-    left:-15vw;
-    background: #80E8FF;
-    filter: blur(10vw);
-}
-
-.circle2{
-    position: absolute;
-    width:30vw;
-    height:30vw;
-    bottom:-15vw;
-    right:-15vw;
-    background: #FFAEFC;
-    filter: blur(10vw);
-}
-
 .img1{
     width: 50%;
     height: 55%;

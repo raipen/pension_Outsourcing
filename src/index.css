@@ -20,6 +20,15 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html{
+  scrollbar-width:none;
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera*/
+}
+
+
 /*페이지가 800px 이하일때*/
 @media screen and (max-width: 800px) {
 }

@@ -1,5 +1,15 @@
 .main>div{
     height:100vh;
     width: 100%;
-    overflow-x: hidden;
+}
+
+.main{
+    overflow: hidden;
+    position: relative;
+}
+
+@media (max-width: 1200px){
+    .main>div{
+        height: calc(50vw + 290px);
+    }
 }
