@@ -26,6 +26,7 @@ const Header = () => {
         } else if (menu.type === "menu") {
             return <HeaderMenu key={index + 1} href={menu.href} menu={menu.menu} />
         }
+        return null;
     });
 
     return (

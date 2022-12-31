@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default ()=> {
+const Room = ()=> {
     return (
       <div>
         <span>객실 소개</span>
@@ -33,3 +33,5 @@ export default ()=> {
       </div>
     );
 }
+
+export default Room;

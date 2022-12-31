@@ -21,7 +21,7 @@ const Info = () => {
   );
 }
 
-export default () => {
+const Page1 = () => {
   return (
     <div className={style.main}>
       <div className={style.circle1}></div>
@@ -34,3 +34,5 @@ export default () => {
     </div>
   );
 }
+
+export default Page1;

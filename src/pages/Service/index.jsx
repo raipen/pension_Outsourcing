@@ -1,9 +1,11 @@
 import React from 'react';
 
-export default ()=> {
+const Service = ()=> {
     return (
       <div>
         <span>서비스들</span>
       </div>
     );
 }
+
+export default Service;
