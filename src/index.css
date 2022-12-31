@@ -1,11 +1,10 @@
-article{
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 0 20px;
+html{
+  transition: all 0.2s ease;
 }
 
-article img{
-  max-width: 800px;
+article{
+  width: 100%;
+  word-break: keep-all;
 }
 
 #root{
@@ -23,13 +22,4 @@ body {
 
 /*페이지가 800px 이하일때*/
 @media screen and (max-width: 800px) {
-  article{
-    padding: 0 10px;
-    width: calc(100% - 20px);
-    word-break: keep-all;
-  }
-
-  article img{
-    max-width: 100%;
-  }
 }

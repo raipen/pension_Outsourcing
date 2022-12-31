@@ -1,60 +1,95 @@
-.header{
-    background-color: #007bff;
-    padding: 10px;
+.header {
+    position: fixed;
+    background: rgba(246, 234, 255, 0.5);
+    padding: 0 10px;
     text-align: center;
-    height: 40px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     justify-items: center;
-    color: #fff;
+    color: #352A3A;
+    width: 1200px;
+    padding: 0px calc(50% - 600px);
 }
 
-.header *{
-    color: #fff;
+.header * {
+    color: #352A3A;
 }
 
-.logo{
+.logo {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    gap:10px;
     font-size: 1.5rem;
     font-weight: bold;
-    float:left;
+    float: left;
     text-decoration: none;
+    word-break: keep-all;
 }
 
-.menu{
-    margin-left:auto;
+.logo>img{
+    width: 32px;
+    height: 32px;
+}
+
+.menu {
+    margin-left: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: center;
-    justify-items: center;
+    align-items: flex-start;
+    padding: 0px;
+    gap: 90px;
+    height: 70px;
 }
 
-.menu>*{
-    width:80px;
+.menu>* {
+    width: 120px;
+    line-height: 70px;
+    text-align: center;
 }
 
-.menu_list>ul{
-    display:none;
+.menu_list>ul {
+    display: none;
     position: absolute;
     list-style: none;
-    background-color: #007bff;
-    width:80px;
+    background: rgba(246, 234, 255, 0.5);
+    width: 120px;
     margin: 0;
     padding: 0;
 }
 
-.menu_list:hover>ul{
+.menu_list>div{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu_list:hover>ul {
     display: block;
 }
 
-.menu a{
-    color: #fff;
+.menu_list>ul>*{
+    display: block;
+    line-height: 50px;
+}
+
+.menu_list>ul>*~*{
+    border-top: 1px solid #ccc;
+}
+
+.menu a {
+    display: block;
     text-decoration: none;
 }
 
-.menu a:hover{
-    color: #fff;
-    text-decoration: underline;
+@media (max-width: 1200px) {
+    .header{
+        width: 100%;
+    }
 }
