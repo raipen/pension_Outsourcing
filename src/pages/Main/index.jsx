@@ -5,7 +5,10 @@ import Page3 from './Page3';
 import style from './index.module.css';
 
 let isScrolling = false;
+let page = 0;
+let maxPage = 3;
 const wheelHandler = (e)=>{
+  console.log("wheel");
   if(isScrolling){
     return;
   }
@@ -13,16 +16,17 @@ const wheelHandler = (e)=>{
   const htmlTag = document.getElementsByTagName("html")[0];
   const {scrollTop} = htmlTag;
   const pageHeight = window.innerHeight;
-  let page = 0;
   
+  console.log(scrollTop);
   if(deltaY > 0){
-    page = Math.floor(scrollTop/pageHeight)+1;
+    if(page === maxPage)
+      return;
+    page++;
   }
   else if(deltaY < 0){
-    page = Math.ceil(scrollTop/pageHeight)-1;
-    if(page < 0){
-      page = 0;
-    }
+    if(page === 0)
+      return;
+    page--;
   }
 
   isScrolling = true;
