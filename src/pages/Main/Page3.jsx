@@ -18,13 +18,18 @@ const ImgSliderItem = styled.div`
   >div{
     font-family: Julius Sans One,Noto Sans KR, sans-serif;
     padding: 10px;
-    background-color: rgba(53, 42, 58, 0.85);
+    background-color: rgba(53, 42, 58, 0.7);
     color: #fff;
     font-size: 64px;
   }
   @media (max-width: 1200px){
     >div{
       font-size: 32px;
+    }
+  }
+  @media (max-width: 600px){
+    >div{
+      font-size: 24px;
     }
   }
 `;
@@ -34,7 +39,7 @@ const ImgSlider = styled.div`
   max-width: 1200px;
   height: calc(100vw / 3);
   max-height: 400px;
-  border-radius: 20px;
+  // border-radius: 20px;
   display: flex;
   justify-content: center;
   border: 3px solid transparent;

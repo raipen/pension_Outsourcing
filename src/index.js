@@ -3,7 +3,6 @@ import ReactDOM from 'react-dom/client';
 import { HashRouter, Routes, Route  } from 'react-router-dom';
 import './index.css';
 import Main from './pages/Main';
-import Intro from './pages/about';
 import Notice from './pages/about/Notice';
 import View from './pages/about/View';
 import Directions from './pages/about/Directions';
@@ -20,7 +19,6 @@ root.render(
       <article onClick={removeMenu}>
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="/about/" element={<Intro />} />
           <Route path="/about/notice" element={<Notice />} />
           <Route path="/about/view" element={<View />} />
           <Route path="/about/directions" element={<Directions />} />

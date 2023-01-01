@@ -45,7 +45,7 @@ export const SliderBtn = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
-  ${p=>p.isRelative? `position: relative; top: 20px;`: `position: absolute;
+  ${p=>p.isRelative? `position: relative; margin: 20px auto;`: `position: absolute;
   top: calc(100vh - 35px);`}
   left: 0;
   >div{
@@ -57,7 +57,7 @@ export const SliderBtn = styled.div`
   }
 
   @media screen and (max-width: 1200px){
-    ${p=>p.isRelative? `top: 20px;`:`top: calc(50vw + 260px);`}
+    ${p=>p.isRelative? `margin: 20px auto;`:`top: calc(50vw + 260px);`}
   }
 `;
 
@@ -73,7 +73,7 @@ const AutoImgSlider = ({ imgList, isRelative }) => {
             else setLeft(left + 1);
         }, 3000);
         return () => clearInterval(interval);
-    }, [left]);
+    }, [left,imgList.length]);
 
     const buttons = [];
     for (let i = 0; i < imgList.length; i++) {

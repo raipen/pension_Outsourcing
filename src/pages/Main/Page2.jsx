@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React from 'react';
 import MainTitle from '../../components/MainTitle';
 import room1 from '../../images/room1.jpg';
 import room2 from '../../images/room2.jpg';
