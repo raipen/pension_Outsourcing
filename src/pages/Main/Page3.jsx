@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
-import LinkButton from '../../components/LinkButton';
-import style from './Page3.module.css';
+import MainTitle from '../../components/MainTitle';
 import styled from 'styled-components';
 import service1 from '../../images/service1.jpg';
 import service2 from '../../images/service2.jpg';
@@ -13,6 +12,21 @@ const ImgSliderItem = styled.div`
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  >div{
+    font-family: Julius Sans One,Noto Sans KR, sans-serif;
+    padding: 10px;
+    background-color: rgba(53, 42, 58, 0.85);
+    color: #fff;
+    font-size: 64px;
+  }
+  @media (max-width: 1200px){
+    >div{
+      font-size: 32px;
+    }
+  }
 `;
 
 const ImgSlider = styled.div`
@@ -43,7 +57,7 @@ const ImgSlider = styled.div`
     transition: left 0.5s;
   }
 
-  @media screen and (max-width: 1200px){
+  @media (max-width: 1200px){
     left: 0px;
   }
 `;
@@ -56,6 +70,7 @@ const SliderBtn = styled.div`
   text-align: center;
   position: absolute;
   top: 50%;
+  transform: translateY(-50%);
   left: ${props => props.left? props.left : "auto"};
   right: ${props => props.right? props.right : "auto"};
   cursor: pointer;
@@ -80,16 +95,13 @@ const Page3 =  ()=> {
 
 
     return (
-      <div className={style.main}>
-        <div className={style.title}>
-          <div className = {style.titleName}>SERVICE</div>
-          <LinkButton text="View Service" link="/service"/>
-        </div>
+      <div>
+        <MainTitle title="SERVICE" buttonText="View Service" dir="left" link="/service"/>
         <ImgSlider left={left}>
         <div>
-          <ImgSliderItem bgImg={service1} />
-          <ImgSliderItem bgImg={service2} />
-          <ImgSliderItem bgImg={service3} />
+          <ImgSliderItem bgImg={service1}><div>SWIMMING POOL</div></ImgSliderItem>
+          <ImgSliderItem bgImg={service2}><div>BONFIRE</div></ImgSliderItem>
+          <ImgSliderItem bgImg={service3}><div>BARBEQUE</div></ImgSliderItem>
         </div>
         <SliderBtn onClick={leftButton} className="material-icons-outlined" left="0">arrow_back_ios</SliderBtn>
         <SliderBtn onClick={rightButton} className="material-icons-outlined" right="0">arrow_forward_ios</SliderBtn>

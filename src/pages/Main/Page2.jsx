@@ -1,6 +1,5 @@
 import React,{useState,useEffect} from 'react';
-import LinkButton from '../../components/LinkButton';
-import style from './Page2.module.css';
+import MainTitle from '../../components/MainTitle';
 import styled from 'styled-components';
 import room1 from '../../images/room1.jpg';
 import room2 from '../../images/room2.jpg';
@@ -94,11 +93,8 @@ const Page2 = () => {
   }, [left]);
 
   return (
-    <div className={style.main}>
-      <div className={style.title}>
-        <div className={style.titleName}>ROOM</div>
-        <LinkButton text="View Room" link="/room" />
-      </div>
+    <div>
+      <MainTitle title="ROOM" buttonText="View Room" dir="right" link="/room" />
       <ImgSlider left={left}>
         <div>
           <ImgSliderItem bgImg={room1} />

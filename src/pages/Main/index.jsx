@@ -3,7 +3,6 @@ import Page1 from './Page1';
 import Page2 from './Page2';
 import Page3 from './Page3';
 import style from './index.module.css';
-import style_Page from './Page1.module.css';
 import BlurCircle from '../../components/BlurCircle';
 
 let isScrolling = false;
@@ -15,7 +14,7 @@ const wheelHandler = (e)=>{
   }
   const {deltaY} = e;
   const htmlTag = document.getElementsByTagName("html")[0];
-  const pageHeight = document.querySelector("."+style_Page.main).clientHeight;
+  const pageHeight = document.querySelectorAll("."+style.main+">div")[4].clientHeight;
   
   if(deltaY > 0){
     if(page === maxPage)

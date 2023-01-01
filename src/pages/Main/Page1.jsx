@@ -1,6 +1,7 @@
 import React from 'react';
 import style from './Page1.module.css';
 import BlurCircle from '../../components/BlurCircle';
+import styled from 'styled-components';
 
 const Info = () => {
   return (
@@ -21,17 +22,24 @@ const Info = () => {
   );
 }
 
+const Main = styled.div`
+  background: linear-gradient(180deg, #B0C4FF 0%, #F6EAFF 100%);
+  @media (max-width: 1200px) {
+    background: none;
+  }
+`;
+
 const Page1 = () => {
   return (
-    <div className={style.main}>
+    <Main>
       <BlurCircle top="-15vw" left="-15vw" color="#80E8FF" />
-      <BlurCircle right="-15vw" bottom="-15vw" m_bottom="-15vw" color="#FFAEFC" />
+      <BlurCircle right="-15vw" bottom="-15vw" m_top="-15vw" color="#FFAEFC" />
       <div className={style.img1}>
         <Info/>
       </div>
       <div className={style.img2} />
       <Info />
-    </div>
+    </Main>
   );
 }
 
