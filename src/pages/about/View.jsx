@@ -6,7 +6,7 @@ import AutoImgSlider from '../../components/AutoImgSlider';
 
 const View =  ()=> {
     return (
-      <div>
+      <div style={{marginTop:`70px`}}>
         <div>VIEW</div>
         <div>| 외부전경</div>
         <AutoImgSlider imgList={[view1,view2,view3]} isRelative={true}/>

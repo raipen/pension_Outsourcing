@@ -5,6 +5,13 @@ import HeaderMenuList from "./HeaderMenuList";
 import HeaderMenu from "./HeaderMenu";
 import BlurCircle from "./BlurCircle";
 
+export const removeMenu = () => {
+    let menu = document.getElementsByClassName(style.menu)[0];
+    menu.classList.remove(style.active);
+    let menuList = document.getElementsByClassName(style.menu_list)[0];
+    menuList.classList.remove(style.active);
+}
+
 const Header = () => {
 
     let menu = [
@@ -32,8 +39,6 @@ const Header = () => {
         let menuList = document.getElementsByClassName(style.menu_list)[0];
         menuList.classList.toggle(style.active);
     }
-
-    //menu가 열려있을 때, 다른 메뉴를 클릭하거나 윈도우를 클릭하면 메뉴를 닫는다.
     
     let menuHtml = menu.map((menu, index) => {
         if (menu.type === "menu_list") {
@@ -46,7 +51,7 @@ const Header = () => {
 
     return (
         <div className={style.header}>
-            <Link to="/" className={style.logo}><img src="/logo.png" alt="" />동궁펜션</Link>
+            <Link to="/" className={style.logo} onClick={removeMenu}><img src="/logo.png" alt="" />동궁펜션</Link>
             <div className={"material-icons-outlined "+style.hamburger} onClick={toggleMenu}>
                 menu
             </div>

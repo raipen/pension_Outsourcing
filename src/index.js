@@ -9,7 +9,7 @@ import View from './pages/about/View';
 import Directions from './pages/about/Directions';
 import Room from './pages/Room';
 import Service from './pages/Service';
-import Header from './components/Header';
+import Header,{removeMenu} from './components/Header';
 import Footer from './components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -17,7 +17,7 @@ root.render(
   <React.StrictMode>
     <HashRouter>
       <Header />
-      <article>
+      <article onClick={removeMenu}>
         <Routes>
           <Route path="/" element={<Main />} />
           <Route path="/about/" element={<Intro />} />
