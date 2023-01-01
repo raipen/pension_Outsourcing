@@ -9,6 +9,7 @@ const BlurCircle = styled.div`
     right: ${props => props.right ? props.right : "auto"} !important;
     width:30vw !important;
     height:30vw !important;
+    overflow: visible !important;
     background-color: ${props => props.color};
     filter: blur(10vw);
 

@@ -96,7 +96,7 @@
 @media (max-width: 1200px) {
     .header{
         width: 100%;
-        justify-content: center;
+        display: block;
         background: linear-gradient(180deg, #B0C4FF 0%, #F6EAFF 100%);
         border-bottom: 70px solid transparent;
         background-clip: content-box;
@@ -105,7 +105,10 @@
     }
 
     .logo{
-        margin-left:auto;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
     }
 
     .menu{
@@ -170,5 +173,9 @@
 
     .menu.active{
         display: flex;
+    }
+
+    .menu_list>ul>*~*{
+        border-top: none;
     }
 }
