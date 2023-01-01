@@ -12,7 +12,7 @@ const BlurCircle = styled.div`
     overflow: visible !important;
     background-color: ${props => props.color};
     filter: blur(10vw);
-
+    ${props => props.zIndex ? "z-index: " + props.zIndex + " !important;" : ""}
     @media screen and (max-width: 1200px){
         top: ${props => props.m_top ? props.m_top : "auto" } !important;
         bottom: ${props => props.m_bottom ? props.m_bottom : "auto"} !important;

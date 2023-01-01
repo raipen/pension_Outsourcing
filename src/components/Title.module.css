@@ -1,6 +1,6 @@
 .title{
     width: 100%;
-    height: 15vh;
+    height: 250px;
     padding-top:70px;
     display: flex;
     flex-direction: row;
@@ -11,4 +11,11 @@
     font-size: 96px;
     position: relative;
     overflow: hidden;
+}
+
+@media (max-width: 1200px) {
+    .title{
+        height: 150px;
+        font-size: 64px;
+    }
 }

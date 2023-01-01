@@ -21,6 +21,7 @@ const ImgSliderItem = styled.div`
     background-color: rgba(53, 42, 58, 0.85);
     color: #fff;
     font-size: 64px;
+    border-radius: 10px;
   }
   @media (max-width: 1200px){
     >div{
