@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import { Link } from 'react-router-dom';
 import style from "./Header.module.css";
 import HeaderMenuList from "./HeaderMenuList";
@@ -33,6 +33,7 @@ const Header = () => {
         menuList.classList.toggle(style.active);
     }
 
+    //menu가 열려있을 때, 다른 메뉴를 클릭하거나 윈도우를 클릭하면 메뉴를 닫는다.
     
     let menuHtml = menu.map((menu, index) => {
         if (menu.type === "menu_list") {
