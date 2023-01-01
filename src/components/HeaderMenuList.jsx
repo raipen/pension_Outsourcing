@@ -2,10 +2,10 @@ import React from 'react';
 import HeaderMenu from "./HeaderMenu";
 import style from "./Header.module.css";
 
-const HeaderMenuList = ({ menuList }) => {
+const HeaderMenuList = ({ menuList, onClick }) => {
     return (
         <div className={style.menu_list}>
-            <div>{menuList.menu}
+            <div onClick={onClick}>{menuList.menu}
                 <span className="material-icons-outlined">
                     expand_more
                 </span>

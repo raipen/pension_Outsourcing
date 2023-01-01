@@ -50,6 +50,7 @@
     font-size: 2rem;
     margin: 20px 0;
     font-weight: 500;
+    color: #352A3A;
 }
 
 
@@ -82,6 +83,7 @@
         bottom: 3px;
         left: 20px;
         text-align: left;
+        color: #352A3A;
     }
 
     .info>.title{

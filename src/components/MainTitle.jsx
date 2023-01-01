@@ -8,7 +8,7 @@ const Container = styled.div`
     flex-direction: column;
     align-items: ${props=>props.dir==="left"?"flex-start":"flex-end"};
     justify-content: center;
-    top: 80px;
+    top: ${props=>props.top};
     ${props=>props.dir}: calc(50% - 600px);
 
     >div{
@@ -21,14 +21,15 @@ const Container = styled.div`
     
     @media (max-width: 1200px){
         ${props=>props.dir}: 20px;
+        top: 80px;
         >div{font-size: 60px;}
     }
 `;
 
 
-const MainTitle = ({title, buttonText, dir, link}) => {
+const MainTitle = ({title, buttonText, dir, top, link}) => {
     return (
-        <Container dir={dir}>
+        <Container dir={dir} top={top?top:"80px"}>
             <div>{title}</div>
             <LinkButton text={buttonText} link={link} />
         </Container>

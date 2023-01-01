@@ -42,7 +42,7 @@ const ImgSlider = styled.div`
   background-origin: border-box;
   background-clip: border-box;
   position: absolute;
-  top: 250px;
+  top: calc(50vh - 100px);
   left: calc(50vw - 600px);
   overflow: hidden;
   >div:nth-child(1){
@@ -59,6 +59,7 @@ const ImgSlider = styled.div`
 
   @media (max-width: 1200px){
     left: 0px;
+    top: 250px;
   }
 `;
 
@@ -96,7 +97,7 @@ const Page3 =  ()=> {
 
     return (
       <div>
-        <MainTitle title="SERVICE" buttonText="View Service" dir="left" link="/service"/>
+        <MainTitle title="SERVICE" buttonText="View Service" dir="left" top="calc(50vh - 300px)" link="/service"/>
         <ImgSlider left={left}>
         <div>
           <ImgSliderItem bgImg={service1}><div>SWIMMING POOL</div></ImgSliderItem>
