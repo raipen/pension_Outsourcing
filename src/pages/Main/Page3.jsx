@@ -30,7 +30,7 @@ const ImgSliderItem = styled.div`
 `;
 
 const ImgSlider = styled.div`
-  width: 100vw;
+  width: calc(100vw - 6px);
   max-width: 1200px;
   height: calc(100vw / 3);
   max-height: 400px;
