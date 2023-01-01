@@ -3,15 +3,16 @@ import style from "./SubTitle.module.css";
 const SubTitle = ({ subTitle, description, margin }) => {
     //margin에 left, right, top, bottom이 있는 경우에만 적용
     const marginStyle = {};
+    console.log(margin);
     if (margin) {
         if (margin.left)
-            style.marginLeft = margin.left;
+            marginStyle.marginLeft = margin.left;
         if (margin.right)
-            style.marginRight = margin.right;
+            marginStyle.marginRight = margin.right;
         if (margin.top)
-            style.marginTop = margin.top;
+            marginStyle.marginTop = margin.top;
         if (margin.bottom)
-            style.marginBottom = margin.bottom;
+            marginStyle.marginBottom = margin.bottom;
     }
 
     return (

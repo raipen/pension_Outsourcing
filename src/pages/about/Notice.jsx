@@ -16,6 +16,9 @@ const Box = styled.div`
     background-clip: padding-box, border-box;
     padding: 20px;
     margin: 0 auto;
+    >*:nth-child(1){
+        margin-top: 0;
+    }
     >h1{
         font-size: 24px;
         line-height: 28px;
@@ -41,6 +44,24 @@ const Box = styled.div`
     }
     li::marker{
         font-size: 12px;
+    }
+    @media (max-width: 1200px){
+        >h1{
+            font-size: 20px;
+            line-height: 24px;
+        }
+        >h2{
+            font-size: 18px;
+            line-height: 22px;
+        }
+        >h3{
+            font-size: 16px;
+            line-height: 20px;
+        }
+        li{
+            font-size: 14px;
+        }
+
     }
 `;
 

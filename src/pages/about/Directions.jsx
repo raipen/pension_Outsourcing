@@ -10,6 +10,7 @@ const Map = styled.div`
   height: calc(80vw * 675 / 1200);
   max-height: 675px;
   margin: 0 auto;
+  z-index: 0;
 `;
 
 const Direction = ()=> {
