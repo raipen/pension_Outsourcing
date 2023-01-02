@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import ReactMarkdown from "react-markdown";
 import room1 from '../../images/room1.jpg';
 import room2 from '../../images/room2.jpg';
 import room3 from '../../images/room3.jpg';
@@ -12,6 +13,7 @@ import Title from '../../components/Title';
 import SubTitle from '../../components/SubTitle';
 import BlurCircle from '../../components/BlurCircle';
 import LinkButton from '../../components/LinkButton';
+import PriceTable from './PriceTable';
 import styled from 'styled-components';
 
 const RoomInfo = styled.div`
@@ -37,7 +39,7 @@ const Pictures = styled.div`
     grid-gap: 10px;
 `;
 
-const Box = styled.div`
+const TableBox = styled.div`
     width: 100vw;
     max-width: 1200px;
     border: 3px solid transparent;
@@ -50,12 +52,33 @@ const Box = styled.div`
     margin: 0 auto;
 `;
 
+const MarkdownBox = styled.div`
+    >*{
+        margin-block: 0;
+    }
+    >h1{
+        font-size: 1.5rem;
+    }
+    >h2{
+        font-size: 1.3rem;
+    }
+    >h2::before{
+        content: "-";
+        margin-right: 10px;
+    }
+
+`;
+
 const Room = () => {
-    const money = {
-        "비수기": ["270,000", "350,000", "490,000", "300,000"],
-        "준성수기": ["400,000", "350,000", "490,000", "400,000"],
-        "성수기": ["500,000", "500,000", "500,000", "490,000"]
-    };
+    const [markdown, setMarkdown] = React.useState("");
+    useEffect(() => {
+        window.scrollTo(0, 0);
+        fetch("/info.md")
+            .then((res) => res.text())
+            .then((text) => {
+                setMarkdown(text);
+            });
+    }, []);
 
     return (
         <div style={{ position: "relative", overflow: "hidden", minHeight: "100vh" }}>
@@ -75,41 +98,23 @@ const Room = () => {
                     <SubTitle
                         subTitle="객실소개"
                         description="침실방 (퀸사이즈 침대3개)3개와 화장실2개 그리고 넓은 거실과 여럿이 사용 가능한 주방이 있어 세가족 또는 단체가 오셔도 편안하게 이용하실 수 있습니다."
-                        margin={{ left: "auto", right: "auto" }}
+                        margin={{ top: "0px", left: "auto", right: "auto" }}
                     />
-                    <LinkButton link="/reservation" text="예약하기" />
+                    <div style={{ textAlign: "right" }}>
+                        <LinkButton href="https://naver.me/GvXbLTLU" text="예약하기" />
+                    </div>
+                    <MarkdownBox>
+                        <ReactMarkdown children={markdown} />
+                    </MarkdownBox>
                 </div>
             </RoomInfo>
             <div style={{ height: "100px" }}></div>
             <SubTitle
                 subTitle="객실요금"
             />
-            <Box>
-                <table style={{ width: "100%", borderCollapse: "collapse" }}>
-                    <thead>
-                        <tr>
-                            <th style={{ border: "1px solid #000", padding: "10px" }}>시기</th>
-                            <th style={{ border: "1px solid #000", padding: "10px" }}>주중</th>
-                            <th style={{ border: "1px solid #000", padding: "10px" }}>금요일</th>
-                            <th style={{ border: "1px solid #000", padding: "10px" }}>토요일</th>
-                            <th style={{ border: "1px solid #000", padding: "10px" }}>일요일</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        {Object.keys(money).map((key, index) => {
-                            return (
-                                <tr key={index}>
-                                    <td style={{ border: "1px solid #000", padding: "10px" }}>{key}</td>
-                                    {money[key].map((m, index) => {
-                                        return <td key={index} style={{ border: "1px solid #000", padding: "10px" }}>{m}</td>
-                                    })}
-                                </tr>
-                            )
-                        }
-                        )}
-                    </tbody>
-                </table>
-            </Box>
+            <TableBox>
+                <PriceTable />
+            </TableBox>
             <div style={{ height: "100px" }}></div>
             <BlurCircle zIndex="-1" color="#80E8FF" top="calc(226px + 10vw)" left="-15vw" m_top="calc(226px + 10vw)" />
             <BlurCircle zIndex="-1" color="#FFAEFC" top="calc(226px + 150vh)" right="-15vw" m_top="calc(226px + 150vh)" />

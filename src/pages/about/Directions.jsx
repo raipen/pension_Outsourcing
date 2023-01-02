@@ -17,6 +17,7 @@ const Direction = ()=> {
     const mapElement = useRef(null);
 
     useEffect(() => {
+      window.scrollTo(0, 0);
       const { naver } = window;
       if (!mapElement.current || !naver) return;
 

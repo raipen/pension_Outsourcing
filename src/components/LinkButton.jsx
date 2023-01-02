@@ -14,7 +14,14 @@ const Button = styled.button`
     font-size: 16px;
     cursor: pointer;
 `;
-const LinkButton = ({text, link}) => {
+
+const LinkButton = ({text, link, href}) => {
+    if(href)
+        return (
+            <a href={href} target="_blank">
+                <Button>{text}</Button>
+            </a>
+        );
     return (
         <Link to={link}>
             <Button>{text}</Button>
