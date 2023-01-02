@@ -13,7 +13,7 @@ const Container = styled.div`
 
     >div{
         font-family: Julius Sans One, Noto Sans KR, sans-serif;
-        font-size: 96px;
+        font-size: 6rem;
         font-weight: 400;
         color: #352A3A;
         margin-bottom: 1rem;
@@ -22,7 +22,7 @@ const Container = styled.div`
     @media (max-width: 1200px){
         ${props=>props.dir}: 20px;
         top: 80px;
-        >div{font-size: 60px;}
+        >div{font-size: 5rem;}
     }
 `;
 

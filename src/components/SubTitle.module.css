@@ -5,9 +5,9 @@
 
 .subTitle{
     font-weight: 600;
-    font-size: 36px;
+    font-size: 2.5rem;
     color: #352A3A;
-    line-height: 44px;
+    line-height: 5.5rem;
 }
 
 .subTitle::before{
@@ -19,10 +19,9 @@
 
 .description{
     font-weight: 400;
-    font-size: 16px;
-    line-height: 19px;
+    font-size: 1rem;
+    line-height: 1.5rem;
     color: #352A3A;
-    line-height: 28px;
 }
 
 @media (max-width: 1200px){

@@ -17,15 +17,10 @@ const ImgSliderItem = styled.div`
   align-items: center;
   >div{
     font-family: Julius Sans One,Noto Sans KR, sans-serif;
-    padding: 10px;
+    padding: 0.4rem;
     background-color: rgba(53, 42, 58, 0.7);
     color: #fff;
-    font-size: 64px;
-  }
-  @media (max-width: 1200px){
-    >div{
-      font-size: 32px;
-    }
+    font-size: 4rem;
   }
   @media (max-width: 600px){
     >div{
@@ -69,10 +64,10 @@ const ImgSlider = styled.div`
 `;
 
 const SliderBtn = styled.div`
-  width: 48px;
-  height: 48px;
-  line-height: 48px;
-  font-size: 48px;
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 3rem;
   text-align: center;
   position: absolute;
   top: 50%;

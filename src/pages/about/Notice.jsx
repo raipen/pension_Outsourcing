@@ -20,48 +20,31 @@ const Box = styled.div`
         margin-top: 0;
     }
     >h1{
-        font-size: 24px;
-        line-height: 28px;
+        font-size: 1.5rem;
+        line-height: 1.5rem;
     }
     >h1::before{
         content: "|";
         margin-right: 10px;
     }
     >h2{
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 1.2rem;
+        line-height: 1.8rem;
     }
     >h2::before{
         content: "-";
         margin-right: 10px;
     }
     >h3{
-        font-size: 20px;
-        line-height: 24px;
+        font-size: 1.1rem;
+        line-height: 1.5rem;
     }
     li{
-        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.8rem;
     }
     li::marker{
-        font-size: 12px;
-    }
-    @media (max-width: 1200px){
-        >h1{
-            font-size: 20px;
-            line-height: 24px;
-        }
-        >h2{
-            font-size: 18px;
-            line-height: 22px;
-        }
-        >h3{
-            font-size: 16px;
-            line-height: 20px;
-        }
-        li{
-            font-size: 14px;
-        }
-
+        font-size: 0.8rem;
     }
 `;
 
