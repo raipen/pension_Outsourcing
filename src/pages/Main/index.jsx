@@ -42,16 +42,29 @@ const preventScroll = (e)=>{
   e.preventDefault();
 };
 
+const handleResize = ()=>{
+  //너비가 1200px 이하이고 높이가 50vw + 290px 미만일 때
+  if(window.innerWidth <= 1200 && window.innerHeight < 50*window.innerWidth/100 + 290){
+    window.removeEventListener('wheel', preventScroll);
+    window.removeEventListener('wheel', wheelHandler);
+  }else{
+    window.addEventListener('wheel', preventScroll, {passive: false});  
+    window.addEventListener('wheel', wheelHandler);
+  }
+};
+
 const Main = ()=> {
     useEffect(()=>{
       window.scrollTo(0, 0);
       page = 0;
       window.addEventListener('wheel', preventScroll, {passive: false});  
       window.addEventListener('wheel', wheelHandler);
+      window.addEventListener('resize', handleResize);
 
         return ()=>{
           window.removeEventListener('wheel', preventScroll);
           window.removeEventListener('wheel', wheelHandler);
+          window.removeEventListener('resize', handleResize);
         };
     },[]);
 
