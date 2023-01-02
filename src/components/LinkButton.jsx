@@ -6,12 +6,12 @@ const Button = styled.button`
     border: none;
     border-radius: 20px;
     color: white;
-    height: 36px;
-    width: 140px;
+    height: 2.5rem;
+    width: 8.5rem;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
 `;
 
