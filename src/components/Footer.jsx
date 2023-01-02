@@ -1,9 +1,10 @@
 import React from "react";
 import style from "./Footer.module.css";
+import {removeMenu} from './Header';
 
 const Footer = () => {
     return (
-        <div className={style.footer}>
+        <div className={style.footer} onClick={removeMenu}>
             <div className={style.logo}><img src="/logo.png" alt=""/></div>
             <div className={style.info}>
                 <div>0507-1368-1420 / 010-2520-1420</div>

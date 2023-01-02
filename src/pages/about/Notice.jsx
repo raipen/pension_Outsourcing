@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect} from "react";
 import ReactMarkdown from "react-markdown";
 import Title from '../../components/Title';
 import SubTitle from '../../components/SubTitle';
@@ -67,7 +67,8 @@ const Box = styled.div`
 
 const Notice = () => {
     const [markdown, setMarkdown] = React.useState("");
-    React.useEffect(() => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
         fetch("/notice.md")
             .then((res) => res.text())
             .then((text) => {

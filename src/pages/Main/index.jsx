@@ -44,6 +44,8 @@ const preventScroll = (e)=>{
 
 const Main = ()=> {
     useEffect(()=>{
+      window.scrollTo(0, 0);
+      page = 0;
       window.addEventListener('wheel', preventScroll, {passive: false});  
       window.addEventListener('wheel', wheelHandler);
 
