@@ -83,7 +83,7 @@ const TableBox = styled.div`
 const Room = () => {
     const [markdown, setMarkdown] = React.useState("");
     useEffect(() => {
-        //window.scrollTo(0, 0);
+        window.scrollTo(0, 0);
         fetch("/info.md")
             .then((res) => res.text())
             .then((text) => {

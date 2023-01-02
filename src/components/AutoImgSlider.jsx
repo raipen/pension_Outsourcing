@@ -18,6 +18,7 @@ export const ImgSlider = styled.div`
   width: calc(200vh - 620px);
   max-width: 1200px;
   height: calc(100vh - 310px);
+  ${p=>p.isRelative? `max-height: 600px;`:""}
   display: flex;
   justify-content: center;
   align-items: center;
