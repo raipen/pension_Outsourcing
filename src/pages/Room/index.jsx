@@ -17,16 +17,44 @@ import PriceTable from './PriceTable';
 import styled from 'styled-components';
 
 const RoomInfo = styled.div`
-    width: 100vw;
+    width: calc(100vw - 40px);
     max-width: 1200px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    gap: 10px;
+    gap: 60px;
     margin: 0 auto;
     >div{
         width: 50%;
+    }
+    @media (max-width: 1200px){
+        flex-direction: column-reverse;
+        gap: 20px;
+        >div{
+            width: 100%;
+        }
+    }
+`;
+
+const MarkdownBox = styled.div`
+    >*{
+        margin-block: 0;
+    }
+    >p{
+        line-height: 1.56rem;
+    }
+    >h1{
+        font-size: 1.5rem;
+        margin-top: 5rem;
+    }
+    >h2{
+        font-size: 1.3rem;
+        margin-top: 1rem;
+    }
+    >h2::before{
+        content: "-";
+        margin-right: 10px;
     }
 `;
 
@@ -50,23 +78,6 @@ const TableBox = styled.div`
     background-clip: padding-box, border-box;
     padding: 20px;
     margin: 0 auto;
-`;
-
-const MarkdownBox = styled.div`
-    >*{
-        margin-block: 0;
-    }
-    >h1{
-        font-size: 1.5rem;
-    }
-    >h2{
-        font-size: 1.3rem;
-    }
-    >h2::before{
-        content: "-";
-        margin-right: 10px;
-    }
-
 `;
 
 const Room = () => {
@@ -100,7 +111,7 @@ const Room = () => {
                         description="침실방 (퀸사이즈 침대3개)3개와 화장실2개 그리고 넓은 거실과 여럿이 사용 가능한 주방이 있어 세가족 또는 단체가 오셔도 편안하게 이용하실 수 있습니다."
                         margin={{ top: "0px", left: "auto", right: "auto" }}
                     />
-                    <div style={{ textAlign: "right" }}>
+                    <div style={{ textAlign: "right", marginBottom: "3rem" }}>
                         <LinkButton href="https://naver.me/GvXbLTLU" text="예약하기" />
                     </div>
                     <MarkdownBox>
