@@ -18,7 +18,7 @@ const Button = styled.button`
 const LinkButton = ({text, link, href}) => {
     if(href)
         return (
-            <a href={href} target="_blank">
+            <a href={href} target="_blank" rel="noreferrer">
                 <Button>{text}</Button>
             </a>
         );
