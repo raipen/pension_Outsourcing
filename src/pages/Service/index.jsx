@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import Title from '../../components/Title';
 import SubTitle from '../../components/SubTitle';
 import service1 from '../../images/service5.jpg';
@@ -49,12 +49,16 @@ const ImgWithSubTitle = ({ img, subTitle, description, direction }) => {
 }
 
 const Service = ()=> {
+  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   let serviceInfo = [
     [service1, "바베큐", "아름다운 자연과 함께 맛있는 바베큐 시간을 즐겨보세요!"],
     [service2, "수영장", "넓은 야외 수영장에서 신나는 물놀이를 즐겨보세요!"],
     [service3, "모닥불", "참나무 모닥불로 아름다운 불멍을 즐겨보세요!"]
   ]
-
 
     return (
       <div style={{ position: "relative", overflow: "hidden", minHeight: "100vh" }}>
