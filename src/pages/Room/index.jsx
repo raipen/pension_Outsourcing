@@ -8,6 +8,10 @@ import room5 from '../../images/room5.jpg';
 import room6 from '../../images/room6.jpg';
 import room7 from '../../images/room7.jpg';
 import room8 from '../../images/room8.jpg';
+import room9 from '../../images/room13.jpeg';
+import room10 from '../../images/room9.jpeg';
+import room11 from '../../images/room11.jpeg';
+import room12 from '../../images/room12.jpeg';
 import AutoImgSlider from '../../components/AutoImgSlider';
 import Title from '../../components/Title';
 import SubTitle from '../../components/SubTitle';
@@ -97,7 +101,7 @@ const Room = () => {
             <SubTitle
                 subTitle="객실사진"
             />
-            <AutoImgSlider imgList={[room1, room2, room3, room4]} isRelative={true} />
+            <AutoImgSlider imgList={[room1, room2, room3, room4, room9, room10, room11, room12]} isRelative={true} />
             <div style={{ height: "100px" }}></div>
             <RoomInfo>
                 <Pictures>
