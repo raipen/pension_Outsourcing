@@ -1,9 +1,13 @@
 import React, {useState} from 'react';
 import MainTitle from '../../components/MainTitle';
+import style from './Page3.module.css';
 import styled from 'styled-components';
 import service1 from '../../images/service1.jpg';
 import service2 from '../../images/service2.jpg';
 import service3 from '../../images/service3.jpg';
+import service4 from '../../images/service7.jpeg';
+import service5 from '../../images/service8.jpeg';
+import LinkButton from '../../components/LinkButton';
 
 const ImgSliderItem = styled.div`
   width: 100vw;
@@ -34,7 +38,6 @@ const ImgSlider = styled.div`
   max-width: 1200px;
   height: calc(100vw / 3);
   max-height: 400px;
-  // border-radius: 20px;
   display: flex;
   justify-content: center;
   border: 3px solid transparent;
@@ -46,7 +49,7 @@ const ImgSlider = styled.div`
   left: calc(50vw - 600px);
   overflow: hidden;
   >div:nth-child(1){
-    width: 300%;
+    width: 600%;
     height: 100%;
     display: flex;
     flex-direction: row;
@@ -79,19 +82,18 @@ const SliderBtn = styled.div`
   color: #fff;
 `;
 
-
 const Page3 =  ()=> {
     const [left, setLeft] = useState(0);
 
     const leftButton = () => {
       if(left === 0)
-        setLeft(-200);
+        setLeft(-500);
       else
         setLeft(left + 100);
     }
 
     const rightButton = () => {
-      setLeft((left - 100)%300);
+      setLeft((left - 100)%600);
     }
 
 
@@ -103,10 +105,14 @@ const Page3 =  ()=> {
           <ImgSliderItem bgImg={service1}><div>SWIMMING POOL</div></ImgSliderItem>
           <ImgSliderItem bgImg={service2}><div>BONFIRE</div></ImgSliderItem>
           <ImgSliderItem bgImg={service3}><div>BARBEQUE</div></ImgSliderItem>
+          <ImgSliderItem bgImg={service5}><div>SWIMMING POOL</div></ImgSliderItem>
+          <ImgSliderItem bgImg={service4}><div>BONFIRE</div></ImgSliderItem>
+          <ImgSliderItem bgImg={service2}><div>BARBEQUE</div></ImgSliderItem>
+        
         </div>
         <SliderBtn onClick={leftButton} className="material-icons-outlined" left="0">arrow_back_ios</SliderBtn>
         <SliderBtn onClick={rightButton} className="material-icons-outlined" right="0">arrow_forward_ios</SliderBtn>
-      </ImgSlider>
+        </ImgSlider>
       </div>
     );
 }
