@@ -16,7 +16,7 @@
 
 .img1>.info{
     left: calc(100% - 600px);
-    bottom: calc(70px - 30vh);
+    bottom: calc(70px - 40vh);
     color: #fff;
     z-index: 10;
 }
@@ -36,9 +36,10 @@
     position: absolute;
     width: 600px;
     word-break: keep-all;
-    bottom: 15vh;
+    bottom: 5vh;
     left: calc(50% - 600px);
     text-align: left;
+    color: #352A3A;
 }
 
 .title{
@@ -51,7 +52,6 @@
     font-size: 2rem;
     margin: 20px 0;
     font-weight: 500;
-    color: #352A3A;
 }
 
 
