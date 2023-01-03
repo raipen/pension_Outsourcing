@@ -2,24 +2,32 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 
 export const ImgSliderItem = styled.div`
-  width: 100vw;
+  width: calc(200vh - 620px);
+  max-width: 1200px;
   height: 100%;
   background-image: url(${props => props.bgImg});
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  @media screen and (max-width: 1200px){
+    width: calc(100vw - 20px);
+  }
 `;
 
 export const ImgSlider = styled.div`
   width: calc(200vh - 620px);
+  max-width: 1200px;
   height: calc(100vh - 310px);
+  ${p=>p.isRelative? `max-height: 600px;`:""}
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   ${p=>p.isRelative? `position: relative;`: `position: absolute;
-  top: 250px;`}
-  left: calc(50vw - 100vh + 310px);
+  top: 250px;
+  left: 50%;
+  transform: translateX(-50%);`}
+  margin: 0 auto;
   >div{
     width: ${p=>p.count}00%;
     height: 100%;
@@ -35,7 +43,7 @@ export const ImgSlider = styled.div`
   @media screen and (max-width: 1200px){
     width: calc(100vw - 20px);
     height: calc(50vw - 10px);
-    left: 10px;
+    ${p=>p.isRelative? "":`left: 10px; transform: none;`}
   }
 `;
 
